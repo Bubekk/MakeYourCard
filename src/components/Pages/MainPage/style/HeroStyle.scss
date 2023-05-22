@@ -1,6 +1,8 @@
 .hero {
     width: 100%;
     height: 430px;
+    display: flex;
+    align-items: center;
     background-color: #F4A8A8;
 
     &__header {

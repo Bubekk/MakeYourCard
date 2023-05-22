@@ -4,6 +4,10 @@
   flex-direction: column;
 
   &__header {
+    height: 50px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
     background-color: #cfd0d3;
 
     &__text {
