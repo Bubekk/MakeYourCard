@@ -1,0 +1,22 @@
+.navbar {
+    width: 100%;
+    height: 120px;
+    background-color: #7994D8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .empty {
+        width: 33.3%;
+    }
+
+    &__logo {
+        width: 33.3%;
+    }
+
+    &__buttons {
+        width: 33.3%;
+        display: flex;
+        justify-content: end;
+    }
+}

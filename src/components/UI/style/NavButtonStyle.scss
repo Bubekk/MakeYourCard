@@ -1,0 +1,25 @@
+.navbar__buttons__btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    border: none;
+    margin-right: 15px;
+    background: none;
+    transition: transform cubic-bezier(0.21,-0.73, 0.84, 1.66) .7s;
+
+    &:hover {
+        transform: rotate(360deg);
+    }
+
+    &--cart {
+        background-image: url(../../../assets/icons/cart.png);
+    }
+
+    &--home {
+        background-image: url(../../../assets/icons/home.png);
+    }
+
+    &--info {
+        background-image: url(../../../assets/icons/info.png);
+    }
+}

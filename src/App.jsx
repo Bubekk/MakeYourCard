@@ -1,13 +1,16 @@
-import { useState } from 'react'
-import './App.css'
+import "./App.css";
+import Footer from "./components/UI/Footer";
+import Nav from "./components/UI/NavBar/Nav";
+import MainPage from "./components/Pages/MainPage/MainPage";
 
 function App() {
-
   return (
     <>
- git test for commiting
+      <Nav />
+      <MainPage />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
