@@ -1,0 +1,17 @@
+.generator {
+    width: 100%;
+    min-height: 82vh;
+    display: flex;
+
+    &__input {
+        width: 30%;
+        padding: 30px 5%;
+        background-color: #D9D9D9;
+    }
+
+    &__output {
+        width: 70%;
+        padding: 30px 5%;
+        background-color:  rgb(223, 223, 223);
+    }
+}

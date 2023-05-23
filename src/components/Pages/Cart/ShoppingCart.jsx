@@ -58,6 +58,33 @@ function ShoppingCart() {
                 <TableCell> $ 30 </TableCell>
                 <TableCell> X </TableCell>
               </StyledTableRow>
+              <StyledTableRow>
+                <TableCell>
+                  <div className="product"></div> Temporary Product
+                </TableCell>
+                <TableCell> 3 </TableCell>
+                <TableCell> $ 10 </TableCell>
+                <TableCell> $ 30 </TableCell>
+                <TableCell> X </TableCell>
+              </StyledTableRow>
+              <StyledTableRow>
+                <TableCell>
+                  <div className="product"></div> Temporary Product
+                </TableCell>
+                <TableCell> 3 </TableCell>
+                <TableCell> $ 10 </TableCell>
+                <TableCell> $ 30 </TableCell>
+                <TableCell> X </TableCell>
+              </StyledTableRow>
+              <StyledTableRow>
+                <TableCell>
+                  <div className="product"></div> Temporary Product
+                </TableCell>
+                <TableCell> 3 </TableCell>
+                <TableCell> $ 10 </TableCell>
+                <TableCell> $ 30 </TableCell>
+                <TableCell> X </TableCell>
+              </StyledTableRow>
             </TableBody>
           </Table>
         </TableContainer>

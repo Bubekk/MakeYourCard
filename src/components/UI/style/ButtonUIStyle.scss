@@ -19,4 +19,12 @@
     background-color: #5da85c;
     color: rgb(227, 233, 236);
   }
+
+  &--generator-input {
+    width: 150px;
+    height: 40px;
+    background-color: rgb(227, 233, 236);
+    color: #191a1b;
+    margin-bottom: 24px;
+  }
 }
