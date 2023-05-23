@@ -1,0 +1,16 @@
+.cart {
+    width: 100%;
+    display: flex;
+
+    &__shopping-cart {
+        width: 60%;
+        padding: 30px 5%;
+        background-color: rgb(223, 223, 223);
+    }
+
+    &__summary {
+        width: 40%;
+        padding: 30px 5%;
+        background-color: #D9D9D9;
+    }
+}

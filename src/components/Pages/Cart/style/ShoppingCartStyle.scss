@@ -1,0 +1,28 @@
+.shopping-cart {
+  width: 100%;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    &__text {
+      font-size: 48px;
+      font-weight: 400;
+    }
+
+    &__quantity {
+      font-size: 48px;
+      font-weight: 400;
+    }
+  }
+
+  &__table {
+    .product {
+      width: 150px;
+      height: 100px;
+      background-color: gray;
+      border-radius: 5px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.button-ui {
+  font-weight: 400;
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &--promo {
+    width: 150px;
+    height: 40px;
+    background-color: rgb(227, 233, 236);
+    color: #191a1b;
+    margin-bottom: 24px;
+  }
+
+  &--checkout {
+    width: 330px;
+    height: 40px;
+    background-color: #5da85c;
+    color: rgb(227, 233, 236);
+  }
+}
