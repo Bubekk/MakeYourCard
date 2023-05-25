@@ -1,44 +1,56 @@
 [
     {
-        "id": 1,
+        "id": "o1",
         "type": "Ocasional Card",
         "name": "Option 01",
         "price": "$10",
-        "imageSrc": "o01"
+        "imageSrc": "o01",
+        "color": "red",
+        "shape": "occasional1"
     },
     {
-        "id": 2,
+        "id": "o2",
         "type": "Ocasional Card",
         "name": "Option 02",
         "price": "$10",
-        "imageSrc": "o02"
+        "imageSrc": "o02",
+        "color": "blue",
+        "shape": "occasional1"
     },
     {
-        "id": 3,
+        "id": "o3",
         "type": "Ocasional Card",
         "name": "Option 03",
         "price": "$10",
-        "imageSrc": "o03"
+        "imageSrc": "o03",
+        "color": "green",
+        "shape": "occasional1"
     },
     {
-        "id": 4,
+        "id": "o4",
         "type": "Ocasional Card",
         "name": "Option 04",
         "price": "$10",
-        "imageSrc": "o04"
+        "imageSrc": "o04",
+        "color": "yellow",
+        "shape": "occasional2"
     },
     {
-        "id": 5,
+        "id": "o5",
         "type": "Ocasional Card",
         "name": "Option 05",
         "price": "$10",
-        "imageSrc": "o05"
+        "imageSrc": "o05",
+        "color": "purple",
+        "shape": "occasional2"
     },
     {
-        "id": 6,
+        "id": "o6",
         "type": "Ocasional Card",
         "name": "Option 06",
         "price": "$10",
-        "imageSrc": "o06"
+        "imageSrc": "o06",
+        "color": "lightblue",
+        "shape": "occasional2"
     }
 ]

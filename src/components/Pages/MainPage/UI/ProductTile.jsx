@@ -3,7 +3,7 @@ import "../style/ProductTileStyle.scss"
 function ProductTile(props) {
 
     function ProductImage( src ) {
-        const imagePath = `../../../../../public/images/product_images/${src}.png`;
+        const imagePath = `../../../../../images/product_images/${src}.png`;
       
         return <img src={imagePath} alt="Product" />;
       }
