@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "type": "Ocasional Card",
+        "name": "Option 01",
+        "price": "$10",
+        "imageSrc": "o01"
+    },
+    {
+        "id": 2,
+        "type": "Ocasional Card",
+        "name": "Option 02",
+        "price": "$10",
+        "imageSrc": "o02"
+    },
+    {
+        "id": 3,
+        "type": "Ocasional Card",
+        "name": "Option 03",
+        "price": "$10",
+        "imageSrc": "o03"
+    },
+    {
+        "id": 4,
+        "type": "Ocasional Card",
+        "name": "Option 04",
+        "price": "$10",
+        "imageSrc": "o04"
+    },
+    {
+        "id": 5,
+        "type": "Ocasional Card",
+        "name": "Option 05",
+        "price": "$10",
+        "imageSrc": "o05"
+    },
+    {
+        "id": 6,
+        "type": "Ocasional Card",
+        "name": "Option 06",
+        "price": "$10",
+        "imageSrc": "o06"
+    }
+]

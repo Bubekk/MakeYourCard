@@ -2,6 +2,7 @@ import './style/MainPageStyle.scss';
 import Hero from './Hero';
 import ProductSection from './UI/ProductSection';
 import LinkToGenerator from './LinkToGenerator';
+import { Link } from 'react-router-dom';
 
 function MainPage() {
     return (
@@ -9,7 +10,7 @@ function MainPage() {
             <Hero />
             <ProductSection header={"Business Cards"} />
             <ProductSection header={"Occasional Cards"} />
-            <LinkToGenerator />
+            <Link to="/generator"><LinkToGenerator /></Link>
         </div>
     )
 }

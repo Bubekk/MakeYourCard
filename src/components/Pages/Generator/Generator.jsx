@@ -1,5 +1,6 @@
 import "./style/GeneratorStyle.scss"
 import GeneratorInput from "./GeneratorInput";
+import GeneratorOutput from "./GeneratorOutput";
 
 function Generator() {
     return (
@@ -8,7 +9,7 @@ function Generator() {
                <GeneratorInput />
             </div>
             <div className="generator__output">
-                Hi output
+                <GeneratorOutput />
             </div>
         </div>
     )

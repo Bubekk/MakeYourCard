@@ -1,5 +1,6 @@
 import "../style/NavStyle.scss";
 import NavButton from "./NavButton";
+import { Link } from "react-router-dom";
 
 function Nav() {
   return <div className="navbar">
@@ -8,9 +9,9 @@ function Nav() {
         <h1 className="navbar__logo-text">Make Your Card</h1>
     </div>
     <div className="navbar__buttons">
-        <NavButton className="cart" />
-        <NavButton className="home" />
-        <NavButton className="info" />
+        <Link to="/cart"><NavButton className="cart" /></Link>
+        <Link to="/"><NavButton className="home" /></Link>
+        <Link to="/info"><NavButton className="info" /></Link>
     </div>
   </div>;
 }
