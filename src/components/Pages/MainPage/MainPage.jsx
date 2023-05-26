@@ -8,7 +8,6 @@ function MainPage() {
     return (
         <div className="mainpage">
             <Hero />
-            <ProductSection header={"Business Cards"} />
             <ProductSection header={"Occasional Cards"} />
             <Link to="/generator"><LinkToGenerator /></Link>
         </div>

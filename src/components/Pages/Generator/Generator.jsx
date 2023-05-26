@@ -7,7 +7,6 @@ import { ProductsContext } from "../../../Contexts/ProductsContext";
 function Generator() {
   const ProductsData = useContext(ProductsContext);
   const products = {
-    bussines: ProductsData.bussinesCards,
     occasional: ProductsData.occasionalCards,
   };
 
@@ -18,11 +17,11 @@ function Generator() {
   };
 
   const [formData, setFormData] = useState({
-    company: "",
-    name: "",
+    heading: "",
+    caption: "",
+    content: "",
+    signature: "",
     contact: "",
-    email: "",
-    address: "",
   })
 
   const handleForm = (e) => {

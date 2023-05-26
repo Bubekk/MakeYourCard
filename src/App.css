@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;700&family=Comfortaa:wght@400;700&family=Dancing+Script&family=M+PLUS+Rounded+1c:wght@400;700&family=Tsukimi+Rounded&display=swap");
+
 #root {
   margin: 0;
   padding: 0;
   text-align: center;
+  font-family: "Advent Pro", sans-serif;
 }

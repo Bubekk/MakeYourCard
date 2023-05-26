@@ -5,16 +5,8 @@ import { ProductsContext } from "../../../../Contexts/ProductsContext";
 
 function ProductSection({ header }) {
   const ProductsData = useContext(ProductsContext);
-  const BussinesCards = ProductsData.bussinesCards;
   const OccasionalCards = ProductsData.occasionalCards;
 
-  const ProductsBussines = BussinesCards.map((product) => (
-    <ProductTile key={product.id} 
-    type={product.type} 
-    name={product.name} 
-    price={product.price} 
-    imgSrc={product.imageSrc} />
-  ));
   const ProductsOccasional = OccasionalCards.map((product) => (
     <ProductTile key={product.id} 
     type={product.type} 
@@ -24,9 +16,7 @@ function ProductSection({ header }) {
   ));
 
   const renderProducts = () => {
-    if (header === "Business Cards") {
-      return ProductsBussines;
-    } else if (header === "Occasional Cards") {
+    if (header === "Occasional Cards") {
       return ProductsOccasional;
     }
   };
