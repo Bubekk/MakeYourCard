@@ -1,12 +1,18 @@
 import "./style/CartStyle.scss";
+import { useContext} from "react";
+import { CartContext } from "../../../Contexts/CartContext";
 import ShoppingCart from "./ShoppingCart";
 import Summary from "./Summary";
 
 function Cart() {
+
+    const cartProducts = useContext(CartContext);
+    const items = cartProducts.cart;
+
     return(
         <div className="cart">
             <div className="cart__shopping-cart">
-                <ShoppingCart />
+                <ShoppingCart items={items}/>
             </div>
             <div className="cart__summary">
                 <Summary />
@@ -16,3 +22,4 @@ function Cart() {
 }
 
 export default Cart;
+

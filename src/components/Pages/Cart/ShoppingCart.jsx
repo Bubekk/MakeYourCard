@@ -1,6 +1,8 @@
 import { Table, TableCell, TableBody, TableRow, TableContainer, TableHead } from "@mui/material";
 import { styled } from "@mui/system";
 import "./style/ShoppingCartStyle.scss";
+import CartItem from "./UI/CartItem";
+import { useState } from "react";
 
 const StyledTableRowHead = styled(TableRow)({
   borderBottom: "2px solid #5F626B",
@@ -8,9 +10,28 @@ const StyledTableRowHead = styled(TableRow)({
 
 const StyledTableRow = styled(TableRow)({
   borderBottom: "2px solid #B6BBCB",
+  height: "180px",
 });
 
-function ShoppingCart() {
+function ShoppingCart(props) {
+  const items = props.items;
+  const itemImage = "../../../../images/product_images/";
+
+  const renderedProducts = () => {
+    return items.map((item) => {
+      const [quantity, setQuantity] = useState(item.quantity);
+
+      const handleBtnClick = (value) => {
+        if (value === "minus") {
+          setQuantity((prevQuantity) => prevQuantity - 1);
+        } else if (value === "plus") {
+          setQuantity((prevQuantity) => prevQuantity + 1);
+        }
+      };
+
+      return <CartItem key={item.id} item={item} itemImage={itemImage} handleBtnClick={handleBtnClick} quantity={quantity} />;
+    });
+  };
 
   return (
     <div className="shopping-cart">
@@ -40,51 +61,7 @@ function ShoppingCart() {
                 <TableCell> $ 30 </TableCell>
                 <TableCell> X </TableCell>
               </StyledTableRow>
-              <StyledTableRow>
-                <TableCell>
-                  <div className="product"></div> Temporary Product
-                </TableCell>
-                <TableCell> 3 </TableCell>
-                <TableCell> $ 10 </TableCell>
-                <TableCell> $ 30 </TableCell>
-                <TableCell> X </TableCell>
-              </StyledTableRow>
-              <StyledTableRow>
-                <TableCell>
-                  <div className="product"></div> Temporary Product
-                </TableCell>
-                <TableCell> 3 </TableCell>
-                <TableCell> $ 10 </TableCell>
-                <TableCell> $ 30 </TableCell>
-                <TableCell> X </TableCell>
-              </StyledTableRow>
-              <StyledTableRow>
-                <TableCell>
-                  <div className="product"></div> Temporary Product
-                </TableCell>
-                <TableCell> 3 </TableCell>
-                <TableCell> $ 10 </TableCell>
-                <TableCell> $ 30 </TableCell>
-                <TableCell> X </TableCell>
-              </StyledTableRow>
-              <StyledTableRow>
-                <TableCell>
-                  <div className="product"></div> Temporary Product
-                </TableCell>
-                <TableCell> 3 </TableCell>
-                <TableCell> $ 10 </TableCell>
-                <TableCell> $ 30 </TableCell>
-                <TableCell> X </TableCell>
-              </StyledTableRow>
-              <StyledTableRow>
-                <TableCell>
-                  <div className="product"></div> Temporary Product
-                </TableCell>
-                <TableCell> 3 </TableCell>
-                <TableCell> $ 10 </TableCell>
-                <TableCell> $ 30 </TableCell>
-                <TableCell> X </TableCell>
-              </StyledTableRow>
+              {renderedProducts()}
             </TableBody>
           </Table>
         </TableContainer>

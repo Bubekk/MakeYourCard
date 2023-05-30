@@ -1,0 +1,32 @@
+.quantity-button {
+    width: 100px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+
+    &__btn {
+        width: 30%;
+        height: 100%;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: rgb(227, 234, 240);
+
+        &--minus {
+            background-color: rgb(202, 119, 119);
+        }
+
+        &--plus {
+            background-color: rgb(113, 182, 113);
+        }
+    }
+
+    &__count {
+        width: 40%;
+        text-align: center;
+        background-color: rgb(185, 185, 185);
+    }
+}

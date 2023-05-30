@@ -1,5 +1,6 @@
 import "./App.css";
 import { ProductsProvider } from "./Contexts/ProductsContext";
+import { CartProvider } from "./Contexts/CartContext";
 import { Routes, Route } from "react-router-dom";
 import Nav from "./components/UI/NavBar/Nav";
 import MainPage from "./components/Pages/MainPage/MainPage";
@@ -14,16 +15,18 @@ function App() {
   return (
     <>
       <Nav />
-        <ProductsProvider>
-            <Routes>
-              <Route exact path="/" element={<MainPage />} ></Route>
-              <Route path="/generator" element={<Generator />} ></Route>
-              <Route path="/cart" element={<Cart />} ></Route>
-              <Route path="/info" element={<Info />} ></Route>
-              <Route path="/products" element={<ProductPage />} ></Route>
-              <Route path="*" element={<NotFound />} ></Route>
-            </Routes>
-        </ProductsProvider>
+      <ProductsProvider>
+        <CartProvider>
+          <Routes>
+            <Route exact path="/" element={<MainPage />}></Route>
+            <Route path="/generator" element={<Generator />}></Route>
+            <Route path="/cart" element={<Cart />}></Route>
+            <Route path="/info" element={<Info />}></Route>
+            <Route path="/products" element={<ProductPage />}></Route>
+            <Route path="*" element={<NotFound />}></Route>
+          </Routes>
+        </CartProvider>
+      </ProductsProvider>
       <Footer />
     </>
   );
