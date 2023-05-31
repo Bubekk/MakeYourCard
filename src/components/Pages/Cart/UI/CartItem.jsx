@@ -8,24 +8,29 @@ const StyledTableRow = styled(TableRow)({
   height: "180px",
 });
 
-function CartItem({ item, itemImage, handleBtnClick, quantity }) {
+const StyledTableCell = styled(TableCell)({
+  fontFamily: "Advent Pro",
+  fontSize: "20px",
+})
+
+function CartItem({ item, itemImage, handleBtnClick, handleInputChange, quantity }) {
 
   return (
     <StyledTableRow>
-      <TableCell>
+      <StyledTableCell>
         <div className="product">
           <img src={itemImage + item.imageSrc + ".png"} alt="" />
           <p>
             {item.type} {item.name}
           </p>
         </div>
-      </TableCell>
-      <TableCell>
-        <QuantityButton quantity={quantity} handleBtnClick={handleBtnClick} />
-      </TableCell>
-      <TableCell>{item.price}</TableCell>
-      <TableCell>$ {item.price * quantity}</TableCell>
-      <TableCell>X</TableCell>
+      </StyledTableCell>
+      <StyledTableCell>
+        <QuantityButton quantity={quantity} handleBtnClick={handleBtnClick} handleInputChange={handleInputChange} />
+      </StyledTableCell>
+      <StyledTableCell>$ {item.price}</StyledTableCell>
+      <StyledTableCell>$ {item.price * quantity}</StyledTableCell>
+      <StyledTableCell>X</StyledTableCell>
     </StyledTableRow>
   );
 }

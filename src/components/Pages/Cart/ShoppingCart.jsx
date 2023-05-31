@@ -8,9 +8,9 @@ const StyledTableRowHead = styled(TableRow)({
   borderBottom: "2px solid #5F626B",
 });
 
-const StyledTableRow = styled(TableRow)({
-  borderBottom: "2px solid #B6BBCB",
-  height: "180px",
+const StyledTableCellHead = styled(TableCell)({
+  fontFamily: "Advent Pro",
+  fontSize: "20px",
 });
 
 function ShoppingCart(props) {
@@ -29,7 +29,20 @@ function ShoppingCart(props) {
         }
       };
 
-      return <CartItem key={item.id} item={item} itemImage={itemImage} handleBtnClick={handleBtnClick} quantity={quantity} />;
+      const handleInputChange = (value) => {
+        setQuantity(value);
+      };
+
+      return (
+        <CartItem
+          key={item.id}
+          item={item}
+          itemImage={itemImage}
+          handleBtnClick={handleBtnClick}
+          handleInputChange={handleInputChange}
+          quantity={quantity}
+        />
+      );
     });
   };
 
@@ -44,25 +57,14 @@ function ShoppingCart(props) {
           <Table>
             <TableHead>
               <StyledTableRowHead>
-                <TableCell>Products</TableCell>
-                <TableCell>Quantity</TableCell>
-                <TableCell>Price</TableCell>
-                <TableCell>Total</TableCell>
-                <TableCell>Remove</TableCell>
+                <StyledTableCellHead>Products</StyledTableCellHead>
+                <StyledTableCellHead>Quantity</StyledTableCellHead>
+                <StyledTableCellHead>Price</StyledTableCellHead>
+                <StyledTableCellHead>Total</StyledTableCellHead>
+                <StyledTableCellHead>Remove</StyledTableCellHead>
               </StyledTableRowHead>
             </TableHead>
-            <TableBody>
-              <StyledTableRow>
-                <TableCell>
-                  <div className="product"></div> Temporary Product
-                </TableCell>
-                <TableCell> 3 </TableCell>
-                <TableCell> $ 10 </TableCell>
-                <TableCell> $ 30 </TableCell>
-                <TableCell> X </TableCell>
-              </StyledTableRow>
-              {renderedProducts()}
-            </TableBody>
+            <TableBody>{renderedProducts()}</TableBody>
           </Table>
         </TableContainer>
       </div>

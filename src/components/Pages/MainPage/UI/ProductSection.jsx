@@ -2,22 +2,27 @@ import { useContext } from "react";
 import "../style/ProductSectionStyle.scss";
 import ProductTile from "./ProductTile";
 import { ProductsContext } from "../../../../Contexts/ProductsContext";
+import { CartContext } from "../../../../Contexts/CartContext";
 
 function ProductSection({ header }) {
-  const ProductsData = useContext(ProductsContext);
-  const OccasionalCards = ProductsData.occasionalCards;
+  const productsData = useContext(ProductsContext);
+  const occasionalCards = productsData.occasionalCards;
+  const cartData = useContext(CartContext);
+  const addToCart = cartData.addToCart;
 
-  const ProductsOccasional = OccasionalCards.map((product) => (
+  const productsOccasional = occasionalCards.map((product) => (
     <ProductTile key={product.id} 
     type={product.type} 
     name={product.name} 
     price={product.price} 
-    imgSrc={product.imageSrc} />
+    imgSrc={product.imageSrc}
+    product={product}
+    addToCart={addToCart} />
   ));
 
   const renderProducts = () => {
     if (header === "Occasional Cards") {
-      return ProductsOccasional;
+      return productsOccasional;
     }
   };
 
