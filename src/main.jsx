@@ -10,3 +10,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </BrowserRouter>
   </React.StrictMode>
 );
+
+//After removing StrictMode localStorage working properly without clearing data after page refresh! Find solution for that bug

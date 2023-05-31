@@ -4,10 +4,13 @@ import { createContext, useEffect, useState } from "react";
 const ProductsContext = createContext();
 
 const ProductsProvider = ({ children }) => {
+
+  //variable for firebase url
   const dbUrl = "https://makeyourcard-65636-default-rtdb.firebaseio.com/";
   const [data, setData] = useState(null);
   const [occasionalCards, setOccasionalCards] = useState([]);
 
+  //function for fetching data from firebase
   const getProducts = async () => {
     try {
       await axios.get(`${dbUrl}products.json`).then((response) => {
@@ -19,10 +22,12 @@ const ProductsProvider = ({ children }) => {
     }
   };
 
+  //fetching data from firebase
   useEffect(() => {
     getProducts();
   }, []);
 
+  //setting products category with fetched data
   useEffect(() => {
     if (data) {
       setOccasionalCards(data.occasional);

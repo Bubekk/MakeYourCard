@@ -12,10 +12,12 @@ function Generator() {
 
   const [selectedProduct, setSelectedProduct] = useState(null);
 
+  //changing product options in input for outputing valid product layout
   const handleProductChange = (selectedProduct) => {
     setSelectedProduct(selectedProduct);
   };
 
+  //form values
   const [formData, setFormData] = useState({
     heading: "",
     caption: "",
@@ -24,6 +26,7 @@ function Generator() {
     contact: "",
   })
 
+  //form handling
   const handleForm = (e) => {
     e.preventDefault();
     const { name, value } = e.target;

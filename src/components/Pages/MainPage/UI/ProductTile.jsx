@@ -1,12 +1,15 @@
 import "../style/ProductTileStyle.scss";
 
 function ProductTile(props) {
+
+  //returning img tag with valid src for every product dynamically
   function ProductImage(src) {
     const imagePath = `../../../../../images/product_images/${src}.png`;
 
     return <img src={imagePath} alt="Product" />;
   };
 
+  //handling temp addToCart button
   const handleClick = () => {
     props.addToCart(props.product, 1);
   };

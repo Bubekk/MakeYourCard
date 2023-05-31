@@ -2,7 +2,6 @@ import { Table, TableCell, TableBody, TableRow, TableContainer, TableHead } from
 import { styled } from "@mui/system";
 import "./style/ShoppingCartStyle.scss";
 import CartItem from "./UI/CartItem";
-import { useState } from "react";
 
 const StyledTableRowHead = styled(TableRow)({
   borderBottom: "2px solid #5F626B",
@@ -19,28 +18,13 @@ function ShoppingCart(props) {
 
   const renderedProducts = () => {
     return items.map((item) => {
-      const [quantity, setQuantity] = useState(item.quantity);
-
-      const handleBtnClick = (value) => {
-        if (value === "minus") {
-          setQuantity((prevQuantity) => prevQuantity - 1);
-        } else if (value === "plus") {
-          setQuantity((prevQuantity) => prevQuantity + 1);
-        }
-      };
-
-      const handleInputChange = (value) => {
-        setQuantity(value);
-      };
-
       return (
         <CartItem
           key={item.id}
           item={item}
           itemImage={itemImage}
-          handleBtnClick={handleBtnClick}
-          handleInputChange={handleInputChange}
-          quantity={quantity}
+          handleQuantityChangeButton={props.handleQuantityChangeButton}
+          handleQuantityChangeInput={props.handleQuantityChangeInput}
         />
       );
     });

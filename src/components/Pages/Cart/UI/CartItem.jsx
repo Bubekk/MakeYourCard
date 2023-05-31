@@ -1,7 +1,6 @@
 import { TableCell, TableRow } from "@mui/material";
 import { styled } from "@mui/system";
 import QuantityButton from "./QuantityButton";
-import { useState } from "react";
 
 const StyledTableRow = styled(TableRow)({
   borderBottom: "2px solid #B6BBCB",
@@ -13,7 +12,7 @@ const StyledTableCell = styled(TableCell)({
   fontSize: "20px",
 })
 
-function CartItem({ item, itemImage, handleBtnClick, handleInputChange, quantity }) {
+function CartItem({ item, itemImage, handleQuantityChangeButton, handleQuantityChangeInput, quantity }) {
 
   return (
     <StyledTableRow>
@@ -26,10 +25,10 @@ function CartItem({ item, itemImage, handleBtnClick, handleInputChange, quantity
         </div>
       </StyledTableCell>
       <StyledTableCell>
-        <QuantityButton quantity={quantity} handleBtnClick={handleBtnClick} handleInputChange={handleInputChange} />
+        <QuantityButton quantity={quantity} handleQuantityChangeButton={handleQuantityChangeButton} handleQuantityChangeInput={handleQuantityChangeInput} item={item} />
       </StyledTableCell>
       <StyledTableCell>$ {item.price}</StyledTableCell>
-      <StyledTableCell>$ {item.price * quantity}</StyledTableCell>
+      <StyledTableCell>$ {item.price * item.quantity}</StyledTableCell>
       <StyledTableCell>X</StyledTableCell>
     </StyledTableRow>
   );

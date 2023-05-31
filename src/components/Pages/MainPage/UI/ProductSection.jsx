@@ -20,6 +20,7 @@ function ProductSection({ header }) {
     addToCart={addToCart} />
   ));
 
+  //rendering valid products category under valid header
   const renderProducts = () => {
     if (header === "Occasional Cards") {
       return productsOccasional;
