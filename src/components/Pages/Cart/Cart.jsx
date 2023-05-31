@@ -17,7 +17,7 @@ function Cart() {
                 <ShoppingCart items={items} handleQuantityChangeButton={handleQuantityChangeButton} handleQuantityChangeInput={handleQuantityChangeInput} />
             </div>
             <div className="cart__summary">
-                <Summary />
+                <Summary items={items} />
             </div>
         </div>
     )

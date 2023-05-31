@@ -34,7 +34,6 @@ function ShoppingCart(props) {
     <div className="shopping-cart">
       <div className="shopping-cart__header">
         <h1 className="shopping-cart__header__text">Shopping Cart</h1>
-        <h2 className="shopping-cart__header__quantity">Items: 0</h2>
       </div>
       <div className="shopping-cart__table">
         <TableContainer>
