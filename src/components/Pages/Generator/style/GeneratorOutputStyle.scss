@@ -58,15 +58,17 @@
       &--occasional2 {
         width: 763px;
         height: 480px;
-        padding: 25px;
+        padding: 30px 30px 25px 30px;
         background-image: url(../../../../../images/product_background/option2.png);
         color: white;
         font-family: 'Comfortaa', cursive;
 
         .header {
+          width: 100%;
           display: flex;
           flex-direction: column;
           align-items: flex-start;
+          text-align: left;
 
           h1 {
             font-size: 64px;
@@ -80,11 +82,13 @@
         }
 
         .content {
+          width: 100%;
           text-align: center;
           margin-top: 35px;
 
           p {
             font-size: 24px;
+            text-align: justify;
           }
         }
 

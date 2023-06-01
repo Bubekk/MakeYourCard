@@ -6,12 +6,12 @@ function GeneratorInput(props) {
 
   const handleProductChange = (e) => {
     const productId = e.target.value;
-    const selectedProduct = [...occasional].find((product) => product.id === productId);
+    const selectedProduct = occasional.find((product) => product.id === productId);
     props.onProductChange(selectedProduct);
   };
 
   //rendering options in select tag
-  const productOptions = [...occasional].map((product) => (
+  const productOptions = occasional.map((product) => (
     <option key={product.id} value={product.id}>
       {product.type} {product.name}
     </option>
