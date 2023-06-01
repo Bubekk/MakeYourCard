@@ -1,0 +1,62 @@
+.info {
+  width: 100%;
+  padding: 50px 90px;
+
+  &__content {
+    h1 {
+      font-size: 48px;
+    }
+
+    &__article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+
+      h2 {
+        font-size: 32px;
+      }
+
+      p {
+        width: 50%;
+        font-size: 24px;
+        text-align: justify;
+        margin-top: 25px;
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+
+    &__profile {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__icon {
+        width: 45px;
+        height: 45px;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &--github {
+          background-image: url(../../../../../images/profiles_icons/github.png);
+        }
+        &--linkedin {
+          background-image: url(../../../../../images/profiles_icons/linkedin.png);
+        }
+        &--portfolio {
+          background-image: url(../../../../../images/profiles_icons/portfolio.png);
+        }
+        &--mail {
+          background-image: url(../../../../../images/profiles_icons/email.png);
+        }
+      }
+    }
+  }
+}
