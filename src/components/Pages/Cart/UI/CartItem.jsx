@@ -1,6 +1,7 @@
-import { TableCell, TableRow } from "@mui/material";
+import { TableCell, TableRow, useThemeProps } from "@mui/material";
 import { styled } from "@mui/system";
 import QuantityButton from "./QuantityButton";
+import ButtonUI from "../../../UI/ButtonUI";
 
 const StyledTableRow = styled(TableRow)({
   borderBottom: "2px solid #B6BBCB",
@@ -12,7 +13,12 @@ const StyledTableCell = styled(TableCell)({
   fontSize: "20px",
 })
 
-function CartItem({ item, itemImage, handleQuantityChangeButton, handleQuantityChangeInput, quantity }) {
+function CartItem({ item, itemImage, handleQuantityChangeButton, handleQuantityChangeInput, removeFromCart, quantity }) {
+
+  //handling delete button click
+  const handleRemoveClick = (e) => {
+    removeFromCart(item.id);
+  }
 
   return (
     <StyledTableRow>
@@ -29,7 +35,7 @@ function CartItem({ item, itemImage, handleQuantityChangeButton, handleQuantityC
       </StyledTableCell>
       <StyledTableCell>$ {item.price}</StyledTableCell>
       <StyledTableCell>$ {item.price * item.quantity}</StyledTableCell>
-      <StyledTableCell>X</StyledTableCell>
+      <StyledTableCell><ButtonUI className="delete-item" onClick={handleRemoveClick} tag={"X"} ></ButtonUI></StyledTableCell>
     </StyledTableRow>
   );
 }

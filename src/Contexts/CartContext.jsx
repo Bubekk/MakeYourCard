@@ -34,6 +34,12 @@ const CartProvider = ({ children }) => {
     }
   };
 
+  const removeFromCart = (itemID) => {
+    const updatedCart = cart.filter((cartItem) => cartItem.id != itemID);
+    setCart(updatedCart);
+    console.log(cart);
+  };
+
   //function for changing quantity of item with "+"/"-" buttons
   const handleQuantityChangeButton = (itemId, q, value) => {
     const updatedCart = [...cart];
@@ -69,7 +75,7 @@ const CartProvider = ({ children }) => {
     addToCart,
     handleQuantityChangeButton,
     handleQuantityChangeInput,
-    // removeFromCart,
+    removeFromCart,
   };
 
   return <CartContext.Provider value={contextValues}>{children}</CartContext.Provider>;

@@ -25,6 +25,7 @@ function ShoppingCart(props) {
           itemImage={itemImage}
           handleQuantityChangeButton={props.handleQuantityChangeButton}
           handleQuantityChangeInput={props.handleQuantityChangeInput}
+          removeFromCart={props.removeFromCart}
         />
       );
     });

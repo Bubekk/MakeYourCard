@@ -27,4 +27,13 @@
     color: #191a1b;
     margin-bottom: 24px;
   }
+
+  &--delete-item {
+    width: 25px;
+    height: 25px;
+    padding: 2px;
+    background-color: rgb(202, 119, 119);
+    color: white;
+    font-size: 20px;
+  }
 }

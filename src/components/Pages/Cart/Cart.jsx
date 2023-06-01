@@ -10,11 +10,12 @@ function Cart() {
     const items = cartProducts.cart;
     const handleQuantityChangeButton = cartProducts.handleQuantityChangeButton;
     const handleQuantityChangeInput = cartProducts.handleQuantityChangeInput;
+    const removeFromCart = cartProducts.removeFromCart;
 
     return(
         <div className="cart">
             <div className="cart__shopping-cart">
-                <ShoppingCart items={items} handleQuantityChangeButton={handleQuantityChangeButton} handleQuantityChangeInput={handleQuantityChangeInput} />
+                <ShoppingCart items={items} handleQuantityChangeButton={handleQuantityChangeButton} handleQuantityChangeInput={handleQuantityChangeInput} removeFromCart={removeFromCart} />
             </div>
             <div className="cart__summary">
                 <Summary items={items} />
