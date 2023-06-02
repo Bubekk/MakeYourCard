@@ -4,6 +4,7 @@ import ButtonUI from "../../UI/ButtonUI";
 function GeneratorInput(props) {
   const { occasional } = props.productsOptions;
 
+  //handling Change of product in selection
   const handleProductChange = (e) => {
     const productId = e.target.value;
     const selectedProduct = occasional.find((product) => product.id === productId);

@@ -10,7 +10,7 @@ function ProductTile(props) {
   };
 
   //handling temp addToCart button
-  const handleClick = () => {
+  const handleClickAddToCart = () => {
     props.addToCart(props.product, 1);
   };
 
@@ -19,7 +19,7 @@ function ProductTile(props) {
       <div className="product-tile__image">{ProductImage(props.imgSrc)}</div>
       <div className="product-tile__tag">
         <p className="product-tile__tag__price">${props.price}</p>
-        <button onClick={handleClick}>+</button>
+        <button onClick={handleClickAddToCart}>+</button>
       </div>
       <p className="product-tile__name"> {props.type} </p>
       <p className="product-tile__name"> {props.name} </p>

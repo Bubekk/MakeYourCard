@@ -9,6 +9,7 @@ function GeneratorOutput(props) {
   const formData = props.formData;
   const [selectedComponent, setSelectedComponent] = useState(<Occasional1 selectedProduct={selectedProduct} formData={formData} />);
   
+  //rendering valid product layout on page depending on selected product in GeneratorInput
   useEffect(() => {
     switch (selectedProduct?.id) {
       case "o1":
