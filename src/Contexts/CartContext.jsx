@@ -19,8 +19,8 @@ const CartProvider = ({ children }) => {
   }, [cart]);
 
   //function for adding new item to cart
-  const addToCart = (item, q) => {
-    const itemToCart = { ...item, quantity: q };
+  const addToCart = (item, q, description) => {
+    const itemToCart = { ...item, quantity: q, description: description };
 
     const existingItem = cart.findIndex((cartItem) => cartItem.id === itemToCart.id);
 

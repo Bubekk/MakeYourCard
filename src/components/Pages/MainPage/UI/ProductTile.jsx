@@ -11,7 +11,7 @@ function ProductTile(props) {
 
   //handling temp addToCart button
   const handleClickAddToCart = () => {
-    props.addToCart(props.product, 1);
+    props.addToCart(props.product, 1, "default");
   };
 
   return (
