@@ -2,7 +2,7 @@ import "./style/SummaryStyle.scss";
 import ButtonUI from "../../UI/ButtonUI";
 import { useEffect, useState } from "react";
 
-function Summary({ items }) {
+function Summary({ items, handleBuyClick }) {
   const [deliveryCost, setDeliveryCost] = useState(13);
 
   //product cost from total price of products and their quantity
@@ -10,7 +10,6 @@ function Summary({ items }) {
 
   //total price of whole product cost and delivery cost
   const [totalPrice, setTotalPrice] = useState(productCost + deliveryCost);
-
 
   //watching product cost at changing quantity of product
   useEffect(() => {
@@ -61,7 +60,7 @@ function Summary({ items }) {
         <input className="summary__promo__input" type="text" placeholder="try PROMOCODE15 for 15% off!" onChange={checkPromoCode} />
       </div>
       <p className="summary__full-price">Total Price: ${totalPrice}</p>
-      <ButtonUI className="checkout" tag="CHECKOUT" />
+      <ButtonUI className="checkout" tag="CHECKOUT" onClick={handleBuyClick} />
     </div>
   );
 }
