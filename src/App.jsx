@@ -12,6 +12,7 @@ import ProductPage from "./components/Pages/ProductPage/ProductPage";
 import Footer from "./components/UI/Footer";
 
 function App() {
+  
   return (
     <>
       <Nav />
@@ -22,7 +23,7 @@ function App() {
             <Route path="/generator" element={<Generator />}></Route>
             <Route path="/cart" element={<Cart />}></Route>
             <Route path="/info" element={<Info />}></Route>
-            <Route path="/products" element={<ProductPage />}></Route>
+            <Route path="/products/:id" element={<ProductPage />}></Route>
             <Route path="*" element={<NotFound />}></Route>
           </Routes>
         </CartProvider>

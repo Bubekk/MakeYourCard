@@ -25,7 +25,7 @@ function CartItem({ item, itemImage, handleQuantityChangeButton, handleQuantityC
         <div className="product">
           <img src={itemImage + item.imageSrc + ".png"} alt="" />
           <p>
-            {item.type} {item.name} {item.description}
+            {item.type} {item.name} {item.content}
           </p>
         </div>
       </StyledTableCell>

@@ -1,8 +1,9 @@
 import { useContext } from "react";
+import { CartContext } from "../../../../Contexts/CartContext";
+import { ProductsContext } from "../../../../Contexts/ProductsContext";
+import { Link } from "react-router-dom";
 import "../style/ProductSectionStyle.scss";
 import ProductTile from "./ProductTile";
-import { ProductsContext } from "../../../../Contexts/ProductsContext";
-import { CartContext } from "../../../../Contexts/CartContext";
 
 function ProductSection({ header }) {
   const productsData = useContext(ProductsContext);
@@ -11,13 +12,18 @@ function ProductSection({ header }) {
   const addToCart = cartData.addToCart;
 
   const productsOccasional = occasionalCards.map((product) => (
-    <ProductTile key={product.id} 
-    type={product.type} 
-    name={product.name} 
-    price={product.price} 
-    imgSrc={product.imageSrc}
-    product={product}
-    addToCart={addToCart} />
+    <Link key={product.id} to={`/products/${product.id}`}>
+      <ProductTile
+        id={product.id}
+        type={product.type}
+        name={product.name}
+        price={product.price}
+        imgSrc={product.imageSrc}
+        description={product.description}
+        product={product}
+        addToCart={addToCart}
+      />
+    </Link>
   ));
 
   //rendering valid products category under valid header

@@ -1,4 +1,5 @@
 .button-ui {
+  height: 40px;
   font-weight: 400;
   font-size: 24px;
   border: none;
@@ -7,7 +8,6 @@
 
   &--promo {
     width: 150px;
-    height: 40px;
     background-color: rgb(227, 233, 236);
     color: #191a1b;
     margin-bottom: 24px;
@@ -15,14 +15,12 @@
 
   &--checkout {
     width: 330px;
-    height: 40px;
     background-color: #5da85c;
     color: rgb(227, 233, 236);
   }
 
   &--generator-input {
     width: 150px;
-    height: 40px;
     background-color: rgb(227, 233, 236);
     color: #191a1b;
     margin-bottom: 24px;
@@ -43,5 +41,10 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     text-decoration: underline;
+  }
+
+  &--product-page {
+    width: 200px;
+    margin-bottom: 15px;
   }
 }

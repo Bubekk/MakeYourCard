@@ -6,7 +6,8 @@
         "price": 4,
         "imageSrc": "o01",
         "shape": "occasional1",
-        "background": "option1"
+        "background": "option1",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, incidunt atque. Officia impedit cum, quisquam amet tenetur fugit, expedita/noptio, dolore eos cumque beatae harum!"
     },
     {
         "id": "o2",
@@ -15,7 +16,8 @@
         "price": 2,
         "imageSrc": "o02",
         "shape": "occasional2",
-        "background": "option2"
+        "background": "option2",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, incidunt atque. Officia impedit cum, quisquam amet tenetur fugit, expedita/noptio, dolore eos cumque beatae harum!"
     },
     {
         "id": "o3",
@@ -24,7 +26,8 @@
         "price": 5,
         "imageSrc": "o03",
         "shape": "occasional3",
-        "background": "option3"
+        "background": "option3",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, incidunt atque. Officia impedit cum, quisquam amet tenetur fugit, expedita/noptio, dolore eos cumque beatae harum!"
     },
     {
         "id": "o4",
@@ -34,7 +37,8 @@
         "imageSrc": "o04",
         "color": "#AC836C",
         "shape": "occasional2",
-        "background": ""
+        "background": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, incidunt atque. Officia impedit cum, quisquam amet tenetur fugit, expedita/noptio, dolore eos cumque beatae harum!"
     },
     {
         "id": "o5",
@@ -44,7 +48,8 @@
         "imageSrc": "o05",
         "color": "#FA965E",
         "shape": "occasional2",
-        "background": ""
+        "background": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, incidunt atque. Officia impedit cum, quisquam amet tenetur fugit, expedita/noptio, dolore eos cumque beatae harum!"
     },
     {
         "id": "o6",
@@ -54,6 +59,7 @@
         "imageSrc": "o06",
         "color": "#B77878",
         "shape": "occasional2",
-        "background": ""
+        "background": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, incidunt atque. Officia impedit cum, quisquam amet tenetur fugit, expedita/noptio, dolore eos cumque beatae harum!"
     }
 ]
